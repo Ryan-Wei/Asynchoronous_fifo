@@ -98,6 +98,31 @@ READ_CTRL_inst
     .r_gray(r_gray)
 );
 
+sync
+#(
+    .DATA_WIDTH(ADDR_WIDTH + 1)
+)
+SYNC_inst_w
+(
+    .clk(w_clk),
+    .rst(w_rst),
+    .data_in(w_gray),
+    .data_out(w_gray_reg)
+);
+
+sync
+#(
+    .DATA_WIDTH(ADDR_WIDTH + 1)
+)
+SYNC_inst_r
+(
+    .clk(r_clk),
+    .rst(r_rst),
+    .data_in(r_gray),
+    .data_out(r_gray_reg)
+);
+
+/*
 generate
     for (genvar i = 0; i <= ADDR_WIDTH; i = i + 1)
     begin
@@ -121,5 +146,6 @@ generate
         );
     end
 endgenerate
+*/
 
 endmodule
