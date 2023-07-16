@@ -22,7 +22,7 @@
 module async_fifo_top
 #(
     parameter FIFO_DEPTH = 8,
-    parameter DATA_WIDTH = 32,
+    parameter DATA_WIDTH = 32
 )
 (
     input w_clk,
@@ -49,11 +49,12 @@ wire full;
 wire empty;
 wire wen;
 
-dual_memory DUAL_MEMORY_inst
+dual_memory 
 #(
     .DATA_WIDTH(DATA_WIDTH),
     .ADDR_WIDTH(ADDR_WIDTH)
 )
+DUAL_MEMORY_inst
 (
     .clk(w_clk),
     .rst(w_rst),
@@ -64,11 +65,12 @@ dual_memory DUAL_MEMORY_inst
     .data_out(r_data)
 );
 
-write_ctrl WRITE_CTRL_inst
+write_ctrl 
 #(
     .DATA_WIDTH(DATA_WIDTH),
     .ADDR_WIDTH(ADDR_WIDTH)
 )
+WRITE_CTRL_inst
 (
     .w_clk(w_clk),
     .w_rst(w_rst),
@@ -80,11 +82,12 @@ write_ctrl WRITE_CTRL_inst
     .w_gray(w_gray)
 );
 
-read_ctrl READ_CTRL_inst
+read_ctrl 
 #(
     .DATA_WIDTH(DATA_WIDTH),
     .ADDR_WIDTH(ADDR_WIDTH)
 )
+READ_CTRL_inst
 (
     .r_clk(r_clk),
     .r_rst(r_rst),
@@ -106,7 +109,7 @@ generate
             .bit_out(w_gray_reg[i])
         );
     end
-    
+
     for (genvar i = 0; i <= ADDR_WIDTH; i = i + 1)
     begin
         sync_bit SYNC_BIT_inst
