@@ -13,7 +13,7 @@ module read_ctrl
     output [ADDR_WIDTH:0] r_gray
 );
 
-reg [ADDR_WIDTH-1:0] w_addr;
+
 reg [ADDR_WIDTH:0] r_addr_reg;
 
 bin_to_gray
@@ -22,7 +22,7 @@ bin_to_gray
 )
 BIN_TO_GRAY_r
 (
-    .bin(r_addr),
+    .bin(r_addr_reg),
     .clk(r_clk),
     .rst(r_rst),
     .gray(r_gray)
@@ -37,7 +37,7 @@ begin
         r_addr_reg <= r_addr_reg + 1;
 end
 
-assign empty = r_addr_reg == w_addr;
+assign empty = r_gray == w_gray;
 assign r_addr = r_addr_reg[ADDR_WIDTH-1 : 0];
     
 endmodule

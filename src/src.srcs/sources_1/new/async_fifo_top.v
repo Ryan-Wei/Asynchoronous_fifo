@@ -104,8 +104,8 @@ sync
 )
 SYNC_inst_w
 (
-    .clk(w_clk),
-    .rst(w_rst),
+    .clk(r_clk),
+    .rst(r_rst),
     .data_in(w_gray),
     .data_out(w_gray_reg)
 );
@@ -116,8 +116,8 @@ sync
 )
 SYNC_inst_r
 (
-    .clk(r_clk),
-    .rst(r_rst),
+    .clk(w_clk),
+    .rst(w_rst),
     .data_in(r_gray),
     .data_out(r_gray_reg)
 );

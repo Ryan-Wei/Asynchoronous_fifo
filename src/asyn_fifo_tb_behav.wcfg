@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="asyn_fifo_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="asyn_fifo_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1056750fs"></ZoomStartTime>
+      <ZoomEndTime time="3226751fs"></ZoomEndTime>
+      <Cursor1Time time="2700000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="group33" type="group">
+      <obj_property name="label">write</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/asyn_fifo_tb/w_clk" type="logic">
+         <obj_property name="ElementShortName">w_clk</obj_property>
+         <obj_property name="ObjectShortName">w_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/w_rst" type="logic">
+         <obj_property name="ElementShortName">w_rst</obj_property>
+         <obj_property name="ObjectShortName">w_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/w_data" type="array">
+         <obj_property name="ElementShortName">w_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">w_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/push" type="logic">
+         <obj_property name="ElementShortName">push</obj_property>
+         <obj_property name="ObjectShortName">push</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/wen" type="logic">
+         <obj_property name="ElementShortName">wen</obj_property>
+         <obj_property name="ObjectShortName">wen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/w_addr" type="array">
+         <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
+         <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/r_gray" type="array">
+         <obj_property name="ElementShortName">r_gray[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_gray[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/w_gray" type="array">
+         <obj_property name="ElementShortName">w_gray[3:0]</obj_property>
+         <obj_property name="ObjectShortName">w_gray[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group34" type="group">
+      <obj_property name="label">read</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/asyn_fifo_tb/r_clk" type="logic">
+         <obj_property name="ElementShortName">r_clk</obj_property>
+         <obj_property name="ObjectShortName">r_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/r_rst" type="logic">
+         <obj_property name="ElementShortName">r_rst</obj_property>
+         <obj_property name="ObjectShortName">r_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/pop" type="logic">
+         <obj_property name="ElementShortName">pop</obj_property>
+         <obj_property name="ObjectShortName">pop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/r_data" type="array">
+         <obj_property name="ElementShortName">r_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/r_addr" type="array">
+         <obj_property name="ElementShortName">r_addr[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_addr[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/w_gray" type="array">
+         <obj_property name="ElementShortName">w_gray[3:0]</obj_property>
+         <obj_property name="ObjectShortName">w_gray[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/r_gray" type="array">
+         <obj_property name="ElementShortName">r_gray[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_gray[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/DUAL_MEMORY_inst/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:7][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>
