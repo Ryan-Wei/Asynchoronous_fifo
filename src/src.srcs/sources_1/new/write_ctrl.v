@@ -39,7 +39,7 @@ begin
 end
 
 
-assign full = (w_gray[ADDR_WIDTH : ADDR_WIDTH-1] ^ r_gray[ADDR_WIDTH : ADDR_WIDTH-1] == 2'b11) && (w_gray[ADDR_WIDTH-2 : 0] == r_gray[ADDR_WIDTH-2 : 0]);
+assign full = (w_gray[ADDR_WIDTH : ADDR_WIDTH-1] == ~r_gray[ADDR_WIDTH : ADDR_WIDTH-1]) && (w_gray[ADDR_WIDTH-2 : 0] == r_gray[ADDR_WIDTH-2 : 0]);
 assign wen = push && !full;
 assign w_addr = w_addr_reg[ADDR_WIDTH-1 : 0];
 

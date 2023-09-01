@@ -37,7 +37,7 @@ module async_fifo_top
 
 );
 
-parameter ADDR_WIDTH = $clog2(FIFO_DEPTH);
+localparam ADDR_WIDTH = $clog2(FIFO_DEPTH);
 
 wire [ADDR_WIDTH-1:0] w_addr;
 wire [ADDR_WIDTH-1:0] r_addr;
