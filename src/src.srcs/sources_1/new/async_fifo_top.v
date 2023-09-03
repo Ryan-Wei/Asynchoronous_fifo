@@ -57,7 +57,6 @@ dual_memory
 DUAL_MEMORY_inst
 (
     .clk(w_clk),
-    .rst(w_rst),
     .w_addr(w_addr),
     .r_addr(r_addr),
     .data_in(w_data),

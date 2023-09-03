@@ -5,7 +5,6 @@ module dual_memory
 ) 
 (
     input clk,
-    input rst,
     input [ADDR_WIDTH-1:0] w_addr,
     input [ADDR_WIDTH-1:0] r_addr,
     input [DATA_WIDTH-1:0] data_in,
@@ -16,21 +15,12 @@ module dual_memory
 reg [DATA_WIDTH-1:0] mem [0:2**ADDR_WIDTH-1];   
 integer i;
 
-always @ (posedge clk, negedge rst)
+always @ (posedge clk)
 begin
-    if (!rst)
-    begin
-        for (i = 0; i < 2**ADDR_WIDTH; i = i + 1)
-        begin
-            mem[i] <= 0;
-        end
-    end
-
-    else if (wen)
+if (wen)
     begin
         mem[w_addr] <= data_in;
     end
-
 end
 
 assign data_out = mem[r_addr];
