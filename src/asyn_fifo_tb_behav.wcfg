@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1056750fs"></ZoomStartTime>
-      <ZoomEndTime time="3226751fs"></ZoomEndTime>
-      <Cursor1Time time="2700000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="3440001fs"></ZoomEndTime>
+      <Cursor1Time time="2000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wvobject fp_name="group33" type="group">
@@ -51,6 +51,10 @@
       <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/w_addr" type="array">
          <obj_property name="ElementShortName">w_addr[2:0]</obj_property>
          <obj_property name="ObjectShortName">w_addr[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/w_gray_next" type="array">
+         <obj_property name="ElementShortName">w_gray_next[3:0]</obj_property>
+         <obj_property name="ObjectShortName">w_gray_next[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/WRITE_CTRL_inst/r_gray" type="array">
          <obj_property name="ElementShortName">r_gray[3:0]</obj_property>
@@ -92,6 +96,14 @@
       <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/w_gray" type="array">
          <obj_property name="ElementShortName">w_gray[3:0]</obj_property>
          <obj_property name="ObjectShortName">w_gray[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/r_bin_next" type="array">
+         <obj_property name="ElementShortName">r_bin_next[32:0]</obj_property>
+         <obj_property name="ObjectShortName">r_bin_next[32:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/r_gray_next" type="array">
+         <obj_property name="ElementShortName">r_gray_next[32:0]</obj_property>
+         <obj_property name="ObjectShortName">r_gray_next[32:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/asyn_fifo_tb/async_fifo_top_inst/READ_CTRL_inst/r_gray" type="array">
          <obj_property name="ElementShortName">r_gray[3:0]</obj_property>

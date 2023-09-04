@@ -27,12 +27,12 @@ module async_fifo_top
 (
     input w_clk,
     input w_rst,
-    input [32-1:0] w_data,
+    input [DATA_WIDTH-1:0] w_data,
     input push,
 
     input r_clk,
     input r_rst,
-    output [32-1:0] r_data,
+    output [DATA_WIDTH-1:0] r_data,
     input pop
 
 );
@@ -66,7 +66,6 @@ DUAL_MEMORY_inst
 
 write_ctrl 
 #(
-    .DATA_WIDTH(DATA_WIDTH),
     .ADDR_WIDTH(ADDR_WIDTH)
 )
 WRITE_CTRL_inst
@@ -83,7 +82,6 @@ WRITE_CTRL_inst
 
 read_ctrl 
 #(
-    .DATA_WIDTH(DATA_WIDTH),
     .ADDR_WIDTH(ADDR_WIDTH)
 )
 READ_CTRL_inst
