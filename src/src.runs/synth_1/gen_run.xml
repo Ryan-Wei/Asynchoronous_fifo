@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1689863870">
   <File Type="PA-TCL" Name="async_fifo_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="async_fifo_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="async_fifo_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="async_fifo_top.vds"/>
   <File Type="RDS-UTIL" Name="async_fifo_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="async_fifo_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="async_fifo_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="async_fifo_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="async_fifo_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/bin_to_gray.v">

@@ -4,8 +4,6 @@ module bin_to_gray
 ) 
 (
     input [DATA_WIDTH-1:0] bin,
-    input clk,
-    input rst,
     output reg [DATA_WIDTH-1:0] gray
 );
 

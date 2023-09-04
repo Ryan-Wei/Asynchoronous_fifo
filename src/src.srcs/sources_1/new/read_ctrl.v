@@ -23,8 +23,6 @@ bin_to_gray
 BIN_TO_GRAY_r
 (
     .bin(r_addr_reg),
-    .clk(r_clk),
-    .rst(r_rst),
     .gray(r_gray)
 );
 

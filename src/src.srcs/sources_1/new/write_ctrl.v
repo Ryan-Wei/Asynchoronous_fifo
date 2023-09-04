@@ -24,8 +24,6 @@ bin_to_gray
 BIN_TO_GRAY_w
 (
     .bin(w_addr_reg),
-    .clk(w_clk),
-    .rst(w_rst),
     .gray(w_gray)
 );
 
@@ -38,9 +36,16 @@ begin
         w_addr_reg <= w_addr_reg + 1;
 end
 
+/*
+assign full = (w_gray[ADDR_WIDTH : ADDR_WIDTH-1] == ~r_gray[ADDR_WIDTH : ADDR_WIDTH-1]) 
+            && (w_gray[ADDR_WIDTH-2 : 0] == r_gray[ADDR_WIDTH-2 : 0]);
+simplified to:
+*/
+assign full = (w_gray == {~r_gray[ADDR_WIDTH : ADDR_WIDTH-1], r_gray[ADDR_WIDTH-2 : 0]})
 
-assign full = (w_gray[ADDR_WIDTH : ADDR_WIDTH-1] == ~r_gray[ADDR_WIDTH : ADDR_WIDTH-1]) && (w_gray[ADDR_WIDTH-2 : 0] == r_gray[ADDR_WIDTH-2 : 0]);
 assign wen = push && !full;
 assign w_addr = w_addr_reg[ADDR_WIDTH-1 : 0];
+
+
 
 endmodule
